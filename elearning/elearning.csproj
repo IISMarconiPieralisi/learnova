@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0F732A10-7F63-4338-9A96-4929F5CC33AC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>elearning</RootNamespace>
+    <AssemblyName>elearning</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="class\ClsAdmin.cs" />
+    <Compile Include="class\ClsClasse.cs" />
+    <Compile Include="class\ClsDB.cs" />
+    <Compile Include="class\ClsDisciplina.cs" />
+    <Compile Include="class\ClsDocente.cs" />
+    <Compile Include="class\ClsDomanda.cs" />
+    <Compile Include="class\ClsDomandaChiusa.cs" />
+    <Compile Include="class\ClsFormare.cs" />
+    <Compile Include="class\ClsPersona.cs" />
+    <Compile Include="class\ClsRispondere.cs" />
+    <Compile Include="class\ClsRisposta.cs" />
+    <Compile Include="class\ClsScegliere.cs" />
+    <Compile Include="class\ClsStudente.cs" />
+    <Compile Include="class\ClsVerifica.cs" />
+    <Compile Include="class\ClsVFRispondere.cs" />
+    <Compile Include="FrmClassi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClassi.Designer.cs">
+      <DependentUpon>FrmClassi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDiscipline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDiscipline.Designer.cs">
+      <DependentUpon>FrmDiscipline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDocenti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDocenti.Designer.cs">
+      <DependentUpon>FrmDocenti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuAdmin.Designer.cs">
+      <DependentUpon>FrmMenuAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAccesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAccesso.Designer.cs">
+      <DependentUpon>FrmAccesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuProfessore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuProfessore.Designer.cs">
+      <DependentUpon>FrmMenuProfessore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuStudente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuStudente.Designer.cs">
+      <DependentUpon>FrmMenuStudente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRisposte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRisposte.Designer.cs">
+      <DependentUpon>FrmRisposte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStatistiche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStatistiche.Designer.cs">
+      <DependentUpon>FrmStatistiche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStudenti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStudenti.Designer.cs">
+      <DependentUpon>FrmStudenti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVerifica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVerifica.Designer.cs">
+      <DependentUpon>FrmVerifica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVerifiche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVerifiche.Designer.cs">
+      <DependentUpon>FrmVerifiche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmClassi.resx">
+      <DependentUpon>FrmClassi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDiscipline.resx">
+      <DependentUpon>FrmDiscipline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDocenti.resx">
+      <DependentUpon>FrmDocenti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuAdmin.resx">
+      <DependentUpon>FrmMenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAccesso.resx">
+      <DependentUpon>FrmAccesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuProfessore.resx">
+      <DependentUpon>FrmMenuProfessore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuStudente.resx">
+      <DependentUpon>FrmMenuStudente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRisposte.resx">
+      <DependentUpon>FrmRisposte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStudenti.resx">
+      <DependentUpon>FrmStudenti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVerifica.resx">
+      <DependentUpon>FrmVerifica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVerifiche.resx">
+      <DependentUpon>FrmVerifiche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconaCestino2_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconaLenteRicerca1_50x50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconaLenteRicerca1_36x36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconaLenteRicerca1_28x28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\iconaCestino1_30x30.png" />
+    <Content Include="Resources\iconaCestino1_35x35.png" />
+    <Content Include="Resources\iconaCestino1_39x39.png" />
+    <Content Include="Resources\iconaCestino2_45x45.png" />
+    <Content Include="Resources\iconaCestino2_48x48_sfondoTrasparente.png" />
+    <Content Include="Resources\iconaCestino2_60x60_sfondoTrasparente.png" />
+    <Content Include="Resources\iconaModifica1_30x30.png" />
+    <Content Include="Resources\iconaModifica1_39x39.png" />
+    <Content Include="Resources\iconaModifica1_50x50.png" />
+    <Content Include="Resources\iconaNuovo1_30x30.png" />
+    <Content Include="Resources\iconaNuovo1_39x39.png" />
+    <Content Include="Resources\iconaNuovo1_50x50.png" />
+    <Content Include="Resources\iconaOrdina1_50x50.png" />
+    <Content Include="Resources\iconaPuntoInterrogativo1_35x35.png" />
+    <Content Include="Resources\iconaUndo1_35x35.png" />
+    <Content Include="Resources\iconaVisualizza1_21x30.png" />
+    <Content Include="Resources\iconaVisualizza1_30x43.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
