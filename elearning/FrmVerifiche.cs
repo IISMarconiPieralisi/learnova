@@ -11,7 +11,7 @@ using System.IO;
 
 namespace elearning
 {
-    public partial class FrmVerifiche : Form
+    public partial class FrmVerifiche : Form//D'Amico
     {
         //Persona loggata
         private ClsPersona _persona;
