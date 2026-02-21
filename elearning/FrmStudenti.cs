@@ -203,7 +203,6 @@ namespace elearning
             //Popolo combobx parametri di ricerca
             cbParametriRicerca.DataSource = Enum.GetNames(typeof(ePARAMETRI_DI_RICERCA));
         }
-
         private void btnNuovo_Click(object sender, EventArgs e)
         {
             _nuovoStudente = true;
@@ -211,7 +210,6 @@ namespace elearning
             CancellaDatiDetail();
             mtbMatricola.Enabled = true;
         }
-
         private void lvStudenti_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Quando seleziono un elemento carico i dati sul pannello detail
@@ -233,19 +231,16 @@ namespace elearning
             }
             
         }
-
         private void cbVediPassword_CheckedChanged(object sender, EventArgs e)
         {
             //Cambio la visibilità della password in base alla checkbox
             tbPassword.UseSystemPasswordChar = !cbVediPassword.Checked;
         }
-
         private void pnlDetail_EnabledChanged(object sender, EventArgs e)
         {
             //Quando cambio la visibilità del pannello rendo invisibile la password
             tbPassword.UseSystemPasswordChar = true;
         }
-
         private void btnModifica_Click(object sender, EventArgs e)
         {
             if(_studenteSelezionato != null)
@@ -259,7 +254,6 @@ namespace elearning
                 MessageBox.Show("Nessun elemento selezionato", "MODIFICA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-
         private void btnSalva_Click(object sender, EventArgs e)
         {
             try
@@ -333,7 +327,6 @@ namespace elearning
                 MessageBox.Show("Errore nel salvataggio modifiche:\n" + ex, "SALVATAGGIO MODIFICHE", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btnCestino_Click(object sender, EventArgs e)
         {
             if (lvStudenti.SelectedIndices.Count == 1)
@@ -363,7 +356,6 @@ namespace elearning
                 MessageBox.Show("Nessun elemento selezionato", "ELIMINAZIONE", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-
         private void btnCerca_Click(object sender, EventArgs e)
         {
             //Determino il parametro di ricerca
@@ -371,7 +363,7 @@ namespace elearning
 
             //Determino se l'utente si è autenticato come admin o come docente
             //if (ClsDB.Admin != null) //L'utente è admin
-            {              
+            //{              
                 switch(_parametroRicerca)
                 {
                     case ePARAMETRI_DI_RICERCA.Nome:
@@ -398,7 +390,7 @@ namespace elearning
                         _listaFiltrata = new List<ClsStudente>();
                         break;
                 }   
-            }
+            //}
             //else if(ClsDB.Docenti != null) //L'utente è docente
             {
                 /*switch (_parametroRicerca)
