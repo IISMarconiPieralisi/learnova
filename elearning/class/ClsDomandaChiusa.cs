@@ -79,6 +79,10 @@ namespace elearning
             _domanda.IdVerifica = this.IdVerifica;
             //_domandaChiusa.PunteggioMax = PunteggioMax;
             //_domandaChiusa.PunteggioMin = PunteggioMin;
+
+
+
+
             
             return _domanda;
         }
