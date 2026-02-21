@@ -9,7 +9,6 @@ namespace elearning
     public class ClsClasse
     {
         string Sigla_Classe;
-
         public string Sigla_Classi
         {
             get { return Sigla_Classe; }
