@@ -77,7 +77,7 @@ namespace elearning
             //resetto i componenti grafici e disattivo il pannello
             tbNome.Text = "";
             nudAnno.Value = DateTime.Now.Year;
-            btnSalva.Text = "Salva" //modifico il testo del pulsante
+            btnSalva.Text = "Salva"; //modifico il testo del pulsante
             pnlDetails.Enabled = false;
         }
 
